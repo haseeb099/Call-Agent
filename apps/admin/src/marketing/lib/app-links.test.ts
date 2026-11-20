@@ -1,0 +1,56 @@
+import { describe, expect, it } from "vitest"
+import {
+  appAffiliateLoginUrl,
+  appAffiliateSignupUrl,
+  appDashboardUrl,
+  appLoginUrl,
+  appPartnerSignupUrl,
+  appSignupUrl,
+} from "./app-links"
+
+const locales = ["en", "fr", "es", "sr"] as const
+
+describe("dashboard auth links", () => {
+  it.each(locales)("prefixes signup and login with %s", (locale) => {
+    expect(appSignupUrl(locale)).toBe(
+      `https://app.ringwise.example/${locale}/signup`
+    )
+    expect(appLoginUrl(locale)).toBe(
+      `https://app.ringwise.example/${locale}/login`
+    )
+  })
+
+  it.each(locales)("preserves source and locale for %s", (locale) => {
+    const url = new URL(appSignupUrl(locale, { source: "calculator" }))
+    expect(url.origin).toBe("https://app.ringwise.example")
+    expect(url.pathname).toBe(`/${locale}/signup`)
+    expect(url.searchParams.get("source")).toBe("calculator")
+  })
+
+  it("carries a pricing plan to signup", () => {
+    expect(appSignupUrl("fr", { plan: "pro" })).toBe(
+      "https://app.ringwise.example/fr/signup?plan=pro"
+    )
+  })
+
+  it("sends affiliates back to the affiliate page in their language", () => {
+    expect(appAffiliateSignupUrl("es")).toBe(
+      "https://app.ringwise.example/es/signup?returnTo=%2Faffiliate"
+    )
+    expect(appAffiliateLoginUrl("sr")).toBe(
+      "https://app.ringwise.example/sr/login?returnTo=%2Faffiliate"
+    )
+  })
+
+  it("sends partners to White Label signup in their language", () => {
+    expect(appPartnerSignupUrl("fr")).toBe(
+      "https://app.ringwise.example/partner/signup?lng=fr"
+    )
+  })
+})
+
+describe("dashboard link", () => {
+  it.each(locales)("opens the dashboard's home in %s", (locale) => {
+    expect(appDashboardUrl(locale)).toBe(`https://app.ringwise.example/?lng=${locale}`)
+  })
+})

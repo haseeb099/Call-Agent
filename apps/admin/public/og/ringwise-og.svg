@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Ringwise">
+  <rect width="1200" height="630" fill="#F6F1E8"/>
+  <rect x="0" y="0" width="420" height="630" fill="#1B2A4A"/>
+  <circle cx="210" cy="280" r="92" fill="none" stroke="#E39A4A" stroke-width="14"/>
+  <circle cx="210" cy="280" r="26" fill="#F6F1E8"/>
+  <path d="M276 214a110 110 0 0 1 22 66" fill="none" stroke="#F6F1E8" stroke-width="10" stroke-linecap="round"/>
+  <text x="500" y="290" fill="#1B2A4A" font-family="Georgia, 'Liberation Serif', serif" font-size="92" font-weight="600">Ringwise</text>
+  <text x="500" y="360" fill="#C4622D" font-family="Georgia, 'Liberation Serif', serif" font-size="32">Your AI front desk that never misses a call</text>
+</svg>
