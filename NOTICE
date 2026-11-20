@@ -1,0 +1,15 @@
+Ringwise
+Copyright (c) 2026 Ringwise (haseeb099)
+
+Ringwise is a white-label AI receptionist based on LobbyStack, an MIT-licensed
+open-source project.
+
+Upstream project: https://github.com/lobbystack/lobbystack
+Copyright (c) 2026 LobbyStack contributors
+
+The original MIT copyright notice and permission notice are kept in LICENSE.
+Do not remove them. Modifications in this repository are Copyright (c) 2026
+Ringwise (haseeb099).
+
+Hostnames on ringwise.example in this tree are placeholders. They are not a
+domain Ringwise operates. Set your own domain before you take a deployment live.

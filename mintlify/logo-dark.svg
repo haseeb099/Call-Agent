@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 36" role="img" aria-label="Ringwise">
+  <circle cx="16" cy="18" r="10" fill="none" stroke="#E39A4A" stroke-width="2.4"/>
+  <circle cx="16" cy="18" r="3" fill="#F6F1E8"/>
+  <path d="M23 10.8a10 10 0 0 1 2.2 6.2" fill="none" stroke="#F6F1E8" stroke-width="1.8" stroke-linecap="round"/>
+  <text x="36" y="25" fill="#F6F1E8" font-family="Georgia, 'Liberation Serif', 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="-0.04em">Ringwise</text>
+</svg>
