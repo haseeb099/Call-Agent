@@ -48,21 +48,25 @@ jobs:
           exit 1
       # airagent.fr/tarifs/ has returned 404 since October 2026, though AirAgent's own homepage
       # still links to it. Remove its exclusion once the page is back or the blog post links elsewhere.
+      # www.myaifrontdesk.com/affiliate returns 410. Drop that source link or the exclusion when it returns.
       - uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose
             --no-progress
             --base-url http://127.0.0.1:4173
-            --remap '^https://ringwise\.com(.*) http://127.0.0.1:4173$1'
-            --exclude '^https://app\.ringwise\.com/'
+            --remap '^https://ringwise\.example(.*) http://127.0.0.1:4173$1'
+            --exclude '^https://app\.ringwise\.example/'
+            --exclude '^https://docs\.ringwise\.example/'
+            --exclude '^https://partners\.ringwise\.example/'
             --exclude '^http://localhost:3000/api/voice/live/'
             --exclude '^https://theresanaiforthat\.com/ai/ringwise/'
             --exclude '(?i)^https://www\.bls\.gov/ooh/office-and-administrative-support/receptionists\.htm$'
             --exclude '^https://answeringservicecare\.com/'
             --exclude '^https://answeringservicesus\.com/'
             --exclude '^https://www\.trustpilot\.com/review/'
-            --exclude '^https://github\.com/ringwise/ringwise(/|$)'
+            --exclude '^https://github\.com/haseeb099/Call-Agent(/|$)'
+            --exclude '^https://www\.myaifrontdesk\.com/affiliate/?$'
             --exclude '^https://consumer\.ftc\.gov/'
             --exclude '^https://(help|www)\.getjobber\.com/'
             --exclude '^https://support\.grasshopper\.com/'

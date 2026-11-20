@@ -1,0 +1,7 @@
+name: Ringwise CodeQL
+
+# js/insufficient-password-hash flags HMAC state tokens and SHA-256 digests of
+# high-entropy API keys. User passwords are hashed by Better Auth, not these paths.
+query-filters:
+  - exclude:
+      id: js/insufficient-password-hash

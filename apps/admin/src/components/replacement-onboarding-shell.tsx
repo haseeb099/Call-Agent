@@ -96,7 +96,7 @@ export function ReplacementOnboardingShell({ icon, eyebrow, title, description, 
             <h1 className="type-page-title">{title}</h1>
             {description ? <p className="type-body-lg text-muted-foreground">{description}</p> : null}
           </div>
-          <div className="mt-10 w-full rounded-3xl border border-border bg-card px-5 py-6 shadow-[0_16px_40px_oklch(0.25_0.04_255/8%)]">{children}</div>
+          <div className="mt-10 w-full rounded-3xl border border-border bg-card py-6 shadow-[0_16px_40px_oklch(0.25_0.04_255/8%)]">{children}</div>
         </div>
       </main>
       <footer className="flex flex-col items-center gap-4 px-6 pb-12 pt-16">

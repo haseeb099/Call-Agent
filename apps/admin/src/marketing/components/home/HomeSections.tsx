@@ -1,7 +1,7 @@
 import { homeSectionsCopy } from "@/marketing/components/LandingPageAdditions"
 import { ProductScene } from "@/marketing/components/scenes/ProductScenes"
 import { DashboardMock } from "@/marketing/components/home/DashboardMock"
-import { AppFrame, Screenshot } from "@/marketing/components/system/AppFrame"
+import { AppFrame } from "@/marketing/components/system/AppFrame"
 import { TileFieldArt } from "@/marketing/components/system/art"
 import { ButtonLink } from "@/marketing/components/system/ButtonLink"
 import { IconCards } from "@/marketing/components/system/IconCards"

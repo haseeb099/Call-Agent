@@ -1,6 +1,4 @@
-import discordIcon from "@iconify-icons/logos/discord-icon"
 import { GithubIcon } from "@/marketing/components/GithubIcon"
-import { Icon } from "@iconify/react/offline"
 import { Separator } from "@/marketing/components/ui/separator"
 import {
   languageSwitcherLinks,
@@ -139,7 +137,6 @@ const footerSections = (locale: Locale) => {
           href: "/affiliate-program/",
         },
         { label: "GitHub", href: "https://github.com/haseeb099/Call-Agent" },
-        { label: "Discord", href: "" },
       ],
     },
     {
@@ -200,16 +197,6 @@ export function Footer({ locale = "en", path }: FooterProps) {
               data-ph-capture-attribute-destination="https://github.com/haseeb099/Call-Agent"
             >
               <GithubIcon className="size-5" />
-            </a>
-            <a
-              href=""
-              className="text-muted-foreground transition-colors hover:text-foreground"
-              aria-label="Discord"
-              data-ph-capture-attribute-section="footer_social"
-              data-ph-capture-attribute-action="join_discord"
-              data-ph-capture-attribute-destination=""
-            >
-              <Icon icon={discordIcon} className="size-5" id="footer-discord" ssr />
             </a>
           </div>
         </div>
