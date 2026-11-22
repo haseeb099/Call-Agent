@@ -40,7 +40,7 @@
     "@ringwise/shared": "workspace:*",
     "@ringwise/telemetry": "workspace:*",
     "@ringwise/web-voice": "workspace:*",
-    "@modelcontextprotocol/server": "2.3.1",
+    "@modelcontextprotocol/server": "2.4.0",
     "@tanstack/react-query": "^5.104.1",
     "@tanstack/react-table": "^9.2.6",
     "ai": "^7.0.159",
